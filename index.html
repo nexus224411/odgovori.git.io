@@ -6,51 +6,55 @@
     <title>Šolski Časopis</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f1f1f1;
             margin: 0;
             padding: 20px;
         }
 
         .header {
             text-align: center;
-            padding: 20px;
-            background-color: #343a40;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #343a40, #007bff);
             color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
 
         .header h1 {
             margin: 0;
-            font-size: 3em;
+            font-size: 2.5em;
         }
 
         .container {
-            margin: 20px auto;
-            max-width: 800px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            max-width: 900px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .article {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .article h2 {
             color: #343a40;
-            border-bottom: 2px solid #007bff;
+            border-bottom: 3px solid #007bff;
             padding-bottom: 10px;
+            font-size: 1.8em;
         }
 
         .article p {
             color: #555;
-            line-height: 1.6;
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
 
         .footer {
             text-align: center;
-            padding: 10px;
+            padding: 15px 20px;
             background-color: #343a40;
             color: white;
             position: fixed;
@@ -59,23 +63,27 @@
         }
 
         .next-button {
-            display: block;
+            display: inline-block;
             margin: 20px auto;
-            padding: 10px 20px;
+            padding: 12px 24px;
             background-color: #007bff;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
             cursor: pointer;
             text-align: center;
             font-size: 16px;
+            text-decoration: none;
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 30px;
+            right: 30px;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+            transition: background-color 0.3s, box-shadow 0.3s;
         }
 
         .next-button:hover {
             background-color: #0056b3;
+            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5);
         }
     </style>
 </head>
@@ -85,7 +93,7 @@
     </div>
     <div class="container">
         <div class="article">
-            
+            <!-- Article content goes here -->
         </div>
     </div>
     <a href="odgovori1.html" class="next-button">Naslednja stran</a>
