@@ -19,6 +19,18 @@
             color: white;
             border-radius: 10px;
             margin-bottom: 20px;
+            animation: slide-in 1s ease-out;
+        }
+
+        @keyframes slide-in {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
         .header h1 {
@@ -33,6 +45,16 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: fade-in 1.5s ease-out;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
         .article {
@@ -42,8 +64,20 @@
         .article h2 {
             color: #343a40;
             border-bottom: 3px solid #007bff;
-            padding-bottom: 10px;
+            padding-bottom: 10px
             font-size: 1.8em;
+            animation: grow 1s ease-out;
+        }
+
+        @keyframes grow {
+            from {
+                transform: scale(0.9);
+                opacity: 0.7;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         .article p {
@@ -60,6 +94,18 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            animation: slide-up 1s ease-out;
+        }
+
+        @keyframes slide-up {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
         .next-button {
@@ -79,8 +125,20 @@
             right: 30px;
             box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
             transition: background-color 0.3s, box-shadow 0.3s;
+            animation: bounce 2s infinite;
         }
-        .h1{font-size: 40px}
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
 
         .next-button:hover {
             background-color: #0056b3;
@@ -95,13 +153,23 @@
     <div class="container">
         <div class="article">
             <!-- Article content goes here -->
-            <h1>>OWNER<br>
-            anonimen</h1>
         </div>
     </div>
     <a href="odgovori1.html" class="next-button">Naslednja stran</a>
     <div class="footer">
         &copy; MATEJ MARINŠEK
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nextButton = document.querySelector('.next-button');
+            nextButton.addEventListener('click', () => {
+                nextButton.textContent = 'Nalagam...';
+                setTimeout(() => {
+                    window.location.href = nextButton.href;
+                }, 500);
+            });
+        });
+    </script>
 </body>
 </html>
